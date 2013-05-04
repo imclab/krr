@@ -1,0 +1,16 @@
+{
+  "name": "web-feed-client",
+  "version": "0.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "express": "~3.2.2",
+    "feedparser": "~0.15.2",
+    "request": "~2.21.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kud/web-feed-client.git"
+  },
+  "author": "Erwann Mest",
+  "license": "BSD"
+}
