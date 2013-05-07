@@ -1,2 +1,6 @@
-web-feed-client
-===============
+krr!
+====
+
+```
+npm install && cd server && node index
+```
