@@ -1,17 +1,23 @@
 [
   {
-    "id": "0",
     "title": "News",
     "feeds": [
       {
-        "id": "0",
         "title": "Fubiz",
         "url": "http://www.fubiz.net/feed/"
       },
       {
-        "id": "1",
         "title": "Smashing Magazine",
         "url": "http://rss1.smashingmagazine.com/feed/"
+      }
+    ]
+  },
+  {
+    "title": "High-tech",
+    "feeds": [
+      {
+        "title": "Blabla",
+        "url": "http://www.fubiz.net/feed/"
       }
     ]
   }

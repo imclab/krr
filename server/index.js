@@ -8,6 +8,18 @@ var express = require('express')
 // Load data file
 var feeds = JSON.parse(fs.readFileSync('feeds.json'));
 
+// Add ids
+var i = 0,
+    content = [];
+
+_.each(feeds, function(item) {
+  item.id = i;
+  content.push(item);
+  i++;
+});
+
+feeds = content;
+
 // Server
 var app = express();
 
@@ -20,29 +32,47 @@ app.use(express.static(__dirname + '/../client'));
 app.use(express.logger());
 
 app.get('/api/feeds', function(req, res) {
-  res.json(feeds);
+  res.json(content);
 });
 
 // API
 app.get('/api/feeds/:id', function(req, res) {
-  var content;
+  var globalContent = [];
+
+  var renderFeeds = _.after(feeds[req.params.id].feeds.length, render);
+
+  console.log(feeds[req.params.id].feeds.length);
 
   _.each(feeds[req.params.id].feeds, function(feed) {
+    var content = [];
+
     request(feed.url)
       .pipe(new feedParser())
       .on('error', function (error) {
+        console.log('hello');
         console.error(error);
       })
       .on('meta', function (meta) {
-        content += '<h1>===== ' + meta.title + ' =====</h1>';
+        //content['title'] = meta.title;
       })
       .on('article', function(article) {
-        content += '<p><a href="' + article.link + '" target="_blank">' + article.title || article.description + '</a></p>';
+        var item = {};
+
+        item.link = article.link;
+        item.title = article.title;
+
+        content.push(item);
       })
       .on('end', function() {
-        res.send(content);
+        globalContent.push(content);
+        renderFeeds();
       });
   });
+
+
+  function render() {
+    res.json(globalContent);
+  }
 });
 
 // Start server
