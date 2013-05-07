@@ -13,11 +13,39 @@
     ]
   },
   {
-    "title": "High-tech",
+    "title": "Video games",
     "feeds": [
       {
-        "title": "Blabla",
-        "url": "http://www.fubiz.net/feed/"
+        "title": "Factornews",
+        "url": "http://www.factornews.com/rss.php"
+      },
+      {
+        "title": "Gameblog.fr",
+        "url": "http://www.gameblog.fr/rss.php"
+      },
+      {
+        "title": "IGN Complete",
+        "url": "http://feeds.ign.com/ignfeeds/all/"
+      },
+      {
+        "title": "JeuxVideo.fr - Jeux Vidéo PC",
+        "url": "http://www.jeuxvideo.fr/xml/pc.xml"
+      },
+      {
+        "title": "JeuxVideo.fr - Jeux Vidéo.TV",
+        "url": "http://www.jeuxvideo.fr/xml/jeuxvideotv.xml"
+      },
+      {
+        "title": "NoFrag",
+        "url": "http://www.nofrag.com/nofrag.rss"
+      },
+      {
+        "title": "Steamfriends",
+        "url": "http://feeds.steamfriends.com/steamfriends"
+      },
+      {
+        "title": "TF2 Official Blog",
+        "url": "http://www.teamfortress.com/rss.xml"
       }
     ]
   }
