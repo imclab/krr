@@ -6,7 +6,7 @@ var express = require('express')
     _ = require('lodash');
 
 // Load data file
-var feeds = JSON.parse(fs.readFileSync('feeds.json'));
+var feeds = JSON.parse(fs.readFileSync(__dirname + '/db/feeds.json'));
 
 // Add ids
 var i = 0,
@@ -29,7 +29,7 @@ app.configure(function() {
 });
 
 app.use(express.static(__dirname + '/../client'));
-app.use(express.logger());
+//app.use(express.logger());
 
 app.get('/api/feeds', function(req, res) {
   res.json(content);
@@ -41,15 +41,12 @@ app.get('/api/feeds/:id', function(req, res) {
 
   var renderFeeds = _.after(feeds[req.params.id].feeds.length, render);
 
-  console.log(feeds[req.params.id].feeds.length);
-
   _.each(feeds[req.params.id].feeds, function(feed) {
     var content = [];
 
     request(feed.url)
       .pipe(new feedParser())
       .on('error', function (error) {
-        console.log('hello');
         console.error(error);
       })
       .on('meta', function (meta) {

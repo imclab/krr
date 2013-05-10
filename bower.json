@@ -1,0 +1,6 @@
+{
+  "name": "krr",
+  "dependencies": {
+    "normalize-css": "~2.1.1"
+  }
+}

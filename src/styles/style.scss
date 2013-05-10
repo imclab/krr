@@ -1,0 +1,71 @@
+@import "compass/css3";
+@import "../bower_components/normalize-css/normalize";
+@import "animation";
+@import "icons";
+
+// Header
+@import "header";
+
+// Loader
+@import "loader";
+
+html,
+body {
+  background: #D8D9DB;
+}
+
+%container {
+  padding: 15px;
+
+  ul {
+    background: white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 15px;
+    @include box-shadow(0 5px 15px -8px black);
+  }
+
+  li {
+    border-bottom: 1px solid #D6D7D9;
+
+    a {
+      color: #000000;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      @extend .icon-book;
+      position: relative;
+      padding-left: 50px;
+
+      &:before {
+        display: block;
+        font-family: "icons";
+        position: absolute;
+        top: 0px;
+        left: 12px;
+        font-size: 1em;
+        border-right: 3px solid #0194C4;
+        padding-right: 10px;
+        height: 38px;
+        line-height: 38px;
+      }
+    }
+  }
+}
+
+.feeds-container {
+  @extend %container;
+}
+
+.feed-container {
+  @extend %container;
+
+  li {
+    a {
+      &:visited {
+        color: #888;
+      }
+    }
+  }
+}
