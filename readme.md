@@ -22,7 +22,7 @@ gem install compass animation --pre
 ### NPM dependencies
 
 ```
-npm install bower -g && npm install
+npm install bower grunt-cli -g && npm install
 ```
 
 ### Bower dependencies
