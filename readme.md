@@ -6,8 +6,8 @@ krr! is a small rss client mostly working with backbone and node.
 
 Are you:
 
-- <a href="#installation-user-part">A user</a>?
-- <a href="#installation-developer-part">A developer</a>?
+- <a href="#installation-user-part">a user</a>
+- <a href="#installation-developer-part">a developer</a>
 
 ---
 
