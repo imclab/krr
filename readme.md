@@ -6,10 +6,10 @@ krr! is a small rss client mostly working with backbone and node.
 ---
 ## Installation
 
-### Compass
+### Ruby dependencies
 
 ```
-gem install compass
+gem install compass animation --pre
 ```
 
 ### NPM dependencies
