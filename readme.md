@@ -3,34 +3,38 @@ krr!
 
 krr! is a small rss client mostly working with backbone and node.
 
+
+Are you:
+
+- A user?
+- A developer?
 ---
-## Installation
 
-### WARNING
+## Installation: Developer part
 
-For the moment, as I don't distribute an out-of-box solution, I've versioned the  ```client``` folder which is a compilation of the ```src``` folder. Later, I'll remove this folder and distribute an easy way to run the application. Just run ```npm install```, it's enough (don't run other installations below).
+### Users
 
-### Ruby dependencies
+#### Ruby dependencies
 
 ```
 gem install compass animation --pre
 ```
 
-### NPM dependencies
+#### NPM dependencies
 
 ```
 npm install bower -g && npm install
 ```
 
-### Bower dependencies
+#### Bower dependencies
 
 ```
 bower install
 ```
 
-### WebFont dependencies
+#### WebFont dependencies
 
-#### OS X
+##### OS X
 
 ```
 brew install fontforge ttfautohint
@@ -40,7 +44,7 @@ npm install grunt-webfont --save-dev
 
 You may need to use `sudo` for `brew`, depending on your setup.
 
-#### Linux
+##### Linux
 
 ```
 sudo apt-get install fontforge eot-utils ttfautohint
@@ -51,14 +55,22 @@ npm install grunt-webfont --save-dev
 
 *Note that if `ttfautohint` is not available in your distribution, your generated font will not be properly hinted.*
 
----
 ## Client compilation
 
 ```
 grunt dev
 ```
-
 ---
+
+## Installation: User part
+
+For the moment, as I don't distribute an out-of-box solution, I've versioned the  ```client``` folder which is a compilation of the ```src``` folder. Later, I'll remove this folder and distribute an easy way to run the application.
+
+```
+npm installation
+```
+---
+
 ## Start the game
 
 ```
