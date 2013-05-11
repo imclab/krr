@@ -19,7 +19,7 @@ gem install compass animation --pre
 ### NPM dependencies
 
 ```
-npm install
+npm install bower -g && npm install
 ```
 
 ### Bower dependencies
