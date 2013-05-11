@@ -75,4 +75,5 @@ app.get('/api/feeds/:id', function(req, res) {
 });
 
 // Start server
+console.log("...and now, the show! ➤  http://localhost:3000");
 app.listen(3000);
