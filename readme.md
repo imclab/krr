@@ -63,7 +63,7 @@ npm start
 
 ## WARNING
 
-For the moment, as I don't distribute an out-of-box solution, I've versioned the  ```client``` folder which is a compilation for the ```src``` folder. Later, I'll remove this folder and distribute an easy way to run the application.
+For the moment, as I don't distribute an out-of-box solution, I've versioned the  ```client``` folder which is a compilation of the ```src``` folder. Later, I'll remove this folder and distribute an easy way to run the application.
 
 ---
 ## Change my rss
