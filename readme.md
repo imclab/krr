@@ -13,29 +13,27 @@ Are you:
 
 ## Installation: Developer part
 
-### Users
-
-#### Ruby dependencies
+### Ruby dependencies
 
 ```
 gem install compass animation --pre
 ```
 
-#### NPM dependencies
+### NPM dependencies
 
 ```
 npm install bower -g && npm install
 ```
 
-#### Bower dependencies
+### Bower dependencies
 
 ```
 bower install
 ```
 
-#### WebFont dependencies
+### WebFont dependencies
 
-##### OS X
+#### OS X
 
 ```
 brew install fontforge ttfautohint
@@ -45,7 +43,7 @@ npm install grunt-webfont --save-dev
 
 You may need to use `sudo` for `brew`, depending on your setup.
 
-##### Linux
+#### Linux
 
 ```
 sudo apt-get install fontforge eot-utils ttfautohint
@@ -66,7 +64,7 @@ grunt dev
 
 ## Installation: User part
 
-For the moment, as I don't distribute an out-of-box solution, I've versioned the  ```client``` folder which is a compilation of the ```src``` folder. Later, I'll remove this folder and distribute an easy way to run the application.
+For the moment, as I don't distribute an out-of-box solution, I've versioned the  ```client``` folder which is a compilation of the ```src``` folder. Later, I'll remove this folder and distribute an easy way to run the application. Just run this command:
 
 ```
 npm installation
