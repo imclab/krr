@@ -6,8 +6,9 @@ krr! is a small rss client mostly working with backbone and node.
 
 Are you:
 
-- A user?
-- A developer?
+- <a href="#installation-user-part">A user</a>?
+- <a href="#installation-developer-part">A developer</a>?
+
 ---
 
 ## Installation: Developer part
@@ -60,6 +61,7 @@ npm install grunt-webfont --save-dev
 ```
 grunt dev
 ```
+
 ---
 
 ## Installation: User part
@@ -69,6 +71,7 @@ For the moment, as I don't distribute an out-of-box solution, I've versioned the
 ```
 npm installation
 ```
+
 ---
 
 ## Start the game
@@ -78,6 +81,7 @@ npm start
 ```
 
 ---
+
 ## Change my rss
 
 Go to ```server/db/feeds.json``` and add yours.
