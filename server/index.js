@@ -61,7 +61,9 @@ app.get('/api/feeds/:id', function(req, res) {
         content.push(item);
       })
       .on('end', function() {
-        globalContent.push(content);
+        if(content.length > 0) {
+          globalContent.push(content);
+        }
         renderFeeds();
       });
   });
