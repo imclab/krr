@@ -3,6 +3,9 @@ krr!
 
 krr! is a small rss client mostly working with backbone and node (node 0.8 at least).
 
+<div style="text-align: center">
+  <img src="doc/preview.png">
+</div>
 
 Are you:
 
