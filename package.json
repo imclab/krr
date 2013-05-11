@@ -10,6 +10,9 @@
     "futures": "~2.3.1",
     "Array.prototype.forEachAsync": "~2.1.1"
   },
+  "scripts": {
+    "start": "node ./server/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/kud/web-feed-client.git"
