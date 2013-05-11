@@ -67,7 +67,7 @@ grunt dev
 For the moment, as I don't distribute an out-of-box solution, I've versioned the  ```client``` folder which is a compilation of the ```src``` folder. Later, I'll remove this folder and distribute an easy way to run the application. Just run this command:
 
 ```
-npm installation
+npm install
 ```
 
 ---
