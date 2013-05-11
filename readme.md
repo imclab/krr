@@ -3,6 +3,7 @@ krr!
 
 krr! is a small rss client mostly working with backbone and node.
 
+---
 ## Installation
 
 ### Compass
@@ -46,12 +47,14 @@ npm install grunt-webfont --save-dev
 
 *Note that if `ttfautohint` is not available in your distribution, your generated font will not be properly hinted.*
 
+---
 ## Client compilation
 
 ```
 grunt dev
 ```
 
+---
 ## Start the game
 
 ```
