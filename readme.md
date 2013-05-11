@@ -56,7 +56,7 @@ npm install grunt-webfont --save-dev
 
 ## Client compilation
 
-As Sass still sucks a bit about css important, please, run this command first before compiling the app.
+As Sass still sucks a bit about css import, please, run this command first before compiling the app.
 
 ```
 grunt copy:cssAsScss
