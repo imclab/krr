@@ -10,6 +10,18 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     copy: {
+      cssAsScss: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/bower_components',
+            src: ['**/*.css', '!**/*.min.css'],
+            dest: 'src/bower_components',
+            filter: 'isFile',
+            ext: ".scss"
+          }
+        ]
+      },
       assets: {
         files: [
           {

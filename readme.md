@@ -1,7 +1,7 @@
 krr!
 ====
 
-krr! is a small rss client mostly working with backbone and node.
+krr! is a small rss client mostly working with backbone and node (node 0.8 at least).
 
 
 Are you:
@@ -55,6 +55,14 @@ npm install grunt-webfont --save-dev
 *Note that if `ttfautohint` is not available in your distribution, your generated font will not be properly hinted.*
 
 ## Client compilation
+
+As Sass still sucks a bit about css important, please, run this command first before compiling the app.
+
+```
+grunt copy:cssAsScss
+```
+
+Now you can compile the app.
 
 ```
 grunt dev
