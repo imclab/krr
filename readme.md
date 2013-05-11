@@ -78,6 +78,8 @@ npm install
 npm start
 ```
 
+and go to ```http://localhost:3000/``` with your favourite browser.
+
 ---
 
 ## Change my rss
