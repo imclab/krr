@@ -6,6 +6,10 @@ krr! is a small rss client mostly working with backbone and node.
 ---
 ## Installation
 
+### WARNING
+
+For the moment, as I don't distribute an out-of-box solution, I've versioned the  ```client``` folder which is a compilation of the ```src``` folder. Later, I'll remove this folder and distribute an easy way to run the application. Just run ```npm install```, it's enough (don't run other installations below).
+
 ### Ruby dependencies
 
 ```
@@ -60,10 +64,6 @@ grunt dev
 ```
 npm start
 ```
-
-## WARNING
-
-For the moment, as I don't distribute an out-of-box solution, I've versioned the  ```client``` folder which is a compilation of the ```src``` folder. Later, I'll remove this folder and distribute an easy way to run the application.
 
 ---
 ## Change my rss
