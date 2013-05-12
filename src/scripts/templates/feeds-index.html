@@ -1,9 +1,7 @@
-<div class="feeds-container">
-  <ul>
-    {{#each feeds}}
-    <li>
-      <a href="/#feeds/{{this.id}}">{{this.title}}</a>
-    </li>
-    {{/each}}
-  </ul>
-</div>
+<ul>
+  {{#each feeds}}
+  <li>
+    <a href="/feeds/{{this.id}}" class="category">{{this.title}}</a>
+  </li>
+  {{/each}}
+</ul>

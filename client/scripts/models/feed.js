@@ -1,6 +1,3 @@
-/**
- * Example of a model. (http://backbonejs.org/#Model)
- */
 define([
   'backbone'
 ], function( Backbone ) {

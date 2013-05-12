@@ -392,7 +392,7 @@ table {
   text-decoration: inherit;
 }
 
-.icon-book:before, .feeds-container li a:before, .feed-container li a:before {
+.icon-book:before, .feed-container li a:before {
   content: "\f100";
 }
 
@@ -407,6 +407,7 @@ header {
   text-shadow: 0 1px black;
   height: 50px;
   position: relative;
+  z-index: 1000;
 }
 header .back {
   background: #2C333A;
@@ -565,10 +566,60 @@ body {
   background: #D8D9DB;
 }
 
-.feeds-container, .feed-container {
+body {
+  padding-top: 50px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.aside ul {
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+}
+.aside ul a {
+  display: block;
+  float: left;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 5px 8px;
+  background: black;
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.aside ul a.is-active {
+  color: black;
+  background: white;
+}
+
+.welcome {
+  background: white;
+  -webkit-box-shadow: 0 5px 15px -8px black;
+  -moz-box-shadow: 0 5px 15px -8px black;
+  box-shadow: 0 5px 15px -8px black;
+  padding: 10px;
+  margin: 15px;
+}
+.welcome p {
+  margin: 0;
+}
+
+.feed-container {
   padding: 15px;
 }
-.feeds-container ul, .feed-container ul {
+.feed-container h2 {
+  margin: 5px;
+}
+.feed-container ul {
   background: white;
   margin: 0;
   padding: 0;
@@ -577,11 +628,12 @@ body {
   -webkit-box-shadow: 0 5px 15px -8px black;
   -moz-box-shadow: 0 5px 15px -8px black;
   box-shadow: 0 5px 15px -8px black;
+  margin-bottom: 25px;
 }
-.feeds-container li, .feed-container li {
+.feed-container li {
   border-bottom: 1px solid #D6D7D9;
 }
-.feeds-container li a, .feed-container li a {
+.feed-container li a {
   color: #333;
   text-decoration: none;
   display: block;
@@ -589,7 +641,7 @@ body {
   position: relative;
   padding-left: 50px;
 }
-.feeds-container li a:before, .feed-container li a:before {
+.feed-container li a:before {
   display: block;
   font-family: "icons";
   position: absolute;
@@ -601,16 +653,9 @@ body {
   height: 100%;
   line-height: 38px;
 }
-.feeds-container li a:focus, .feed-container li a:focus, .feeds-container li a:hover, .feed-container li a:hover {
+.feed-container li a:focus, .feed-container li a:hover {
   background: black;
   color: white;
-}
-
-.feed-container h2 {
-  margin: 5px;
-}
-.feed-container ul {
-  margin-bottom: 25px;
 }
 .feed-container li a:visited {
   color: #888;

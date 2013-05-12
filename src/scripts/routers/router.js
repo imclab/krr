@@ -7,46 +7,41 @@ define([
   'models/feed',
   'views/welcome/index',
   'views/loader/index',
-  'views/feeds/index',
-  'views/feed/index'
-], function( Backbone, Feeds, Feed, WelcomeView, LoaderView, FeedsView, FeedView ) {
+  'views/categories/index',
+  'views/feeds/index'
+], function( Backbone, Feeds, Feed, WelcomeView, LoaderView, CategoriesView, FeedsView ) {
 
   return Backbone.Router.extend({
 
     routes: {
         '': 'root',
-        'feeds': 'showFeeds',
         'feeds/:id': 'showFeed'
     },
 
     initialize: function() {
-      this.LoaderView = new LoaderView();
-    },
-
-    root: function() {
       var self = this;
 
-      // self.WelcomeView = new WelcomeView();
-      // self.WelcomeView.render();
-
-      // window.setTimeout(function() {
-        self.navigate('/feeds', true);
-      // }, 1500);
-    },
-
-    showFeeds: function() {
-      var self = this;
-
-      self.LoaderView.render();
+      self.LoaderView = new LoaderView();
 
       self.Feeds = new Feeds();
 
       self.Feeds.fetch({
         success: function() {
-          self.FeedsView = new FeedsView({collection: self.Feeds});
-          self.FeedsView.render();
+          self.CategoriesView = new CategoriesView({collection: self.Feeds});
+          self.CategoriesView.render();
         }
       });
+    },
+
+    root: function() {
+      var self = this;
+
+      if(typeof self.CategoriesView != 'undefined') {
+        self.CategoriesView.noChoice();
+      }
+
+      self.WelcomeView = new WelcomeView();
+      self.WelcomeView.render();
     },
 
     showFeed: function(id) {
@@ -58,9 +53,8 @@ define([
 
       self.Feed.fetch({
         success: function() {
-          console.log(self.Feed.toJSON());
-          self.FeedView = new FeedView({model: self.Feed});
-          self.FeedView.render();
+          self.FeedViews = new FeedsView({model: self.Feed});
+          self.FeedViews.render();
         }
       });
     }
