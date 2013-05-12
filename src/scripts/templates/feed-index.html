@@ -1,14 +1,16 @@
 <div class="feed-container">
   {{#if feeds}}
   {{#each feeds}}
+    {{#if this.title}}
     <h2>{{this.title}}</h2>
-    <ul>
+    {{/if}}
     {{#if this.articles}}
+    <ul>
     {{#each this.articles}}
       <li><a href="{{this.link}}" target="_blank">{{this.title}}</a></li>
     {{/each}}
-    {{/if}}
     </ul>
+    {{/if}}
   {{/each}}
   {{/if}}
 </div>

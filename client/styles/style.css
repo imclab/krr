@@ -582,7 +582,7 @@ body {
   border-bottom: 1px solid #D6D7D9;
 }
 .feeds-container li a, .feed-container li a {
-  color: #000000;
+  color: #333;
   text-decoration: none;
   display: block;
   padding: 10px;
@@ -606,6 +606,12 @@ body {
   color: white;
 }
 
+.feed-container h2 {
+  margin: 5px;
+}
+.feed-container ul {
+  margin-bottom: 25px;
+}
 .feed-container li a:visited {
   color: #888;
 }
