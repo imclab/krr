@@ -42,7 +42,8 @@ app.get('/api/feeds/:id', function(req, res) {
   var renderFeeds = _.after(feeds[req.params.id].feeds.length, render);
 
   _.each(feeds[req.params.id].feeds, function(feed) {
-    var content = [];
+    var item = {};
+        item.articles = [];
 
     request(feed.url)
       .pipe(new feedParser())
@@ -50,20 +51,18 @@ app.get('/api/feeds/:id', function(req, res) {
         console.error(error);
       })
       .on('meta', function (meta) {
-        //content['title'] = meta.title;
+        item.title = meta.title;
       })
       .on('article', function(article) {
-        var item = {};
+        var e = {};
 
-        item.link = article.link;
-        item.title = article.title;
+        e.link = article.link;
+        e.title = article.title;
 
-        content.push(item);
+        item.articles.push(e);
       })
       .on('end', function() {
-        if(content.length > 0) {
-          globalContent.push(content);
-        }
+        globalContent.push(item);
         renderFeeds();
       });
   });

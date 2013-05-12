@@ -1,9 +1,10 @@
 <div class="feed-container">
   {{#if feeds}}
   {{#each feeds}}
+    <h2>{{this.title}}</h2>
     <ul>
-    {{#if this}}
-    {{#each this}}
+    {{#if this.articles}}
+    {{#each this.articles}}
       <li><a href="{{this.link}}" target="_blank">{{this.title}}</a></li>
     {{/each}}
     {{/if}}
